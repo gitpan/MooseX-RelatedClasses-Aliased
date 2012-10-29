@@ -1,0 +1,17 @@
+# This file provides instructions for packaging.
+
+`MooseX-RelatedClasses-Aliased`
+	perl_version_from m`MooseX::RelatedClasses::Aliased`;
+	version_from      m`MooseX::RelatedClasses::Aliased`;
+	readme_from       m`MooseX::RelatedClasses::Aliased`;
+	test_requires     p`Test::More 0.61`;
+	requires          p`MooseX::RelatedClasses 0.001`;
+	requires          p`Carp 0`;
+	requires          p`Devel::Caller 2.00`;
+	requires          p`Hook::AfterRuntime 0`;
+	requires          p`List::MoreUtils 0`;
+	requires          p`Moose::Util 2.00`;
+	requires          p`Scalar::Util 0`;
+	requires          p`Sub::Install 0`;
+	.
+

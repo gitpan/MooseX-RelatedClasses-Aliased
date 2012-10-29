@@ -1,0 +1,66 @@
+NAME
+    MooseX::RelatedClasses::Aliased - sugar for MooseX::RelatedClasses
+
+SYNOPSIS
+    Example from MooseX::RelatedClasses...
+
+       package My::Framework;
+       use Moose;
+       use namespace::autoclean;
+       with 'MooseX::RelatedClasses' => {
+          name => 'Thinger',
+       };
+
+    Later on you'd do this:
+
+       sub my_method {
+          my $self    = shift;
+          my $thinger = $self->thinger_class->new(...);
+          ...;
+       }
+
+    Using this module...
+
+       package My::Framework;
+       use Moose;
+       use namespace::autoclean;
+       use MooseX::RelatedClasses::Aliased => {
+          name => 'Thinger',
+       };
+
+    And:
+
+       sub my_method {
+          my $self    = shift;
+          my $thinger = Thinger->new(...);
+          ...;
+       }
+
+DESCRIPTION
+    This is the spawn on MooseX::RelatedClasses and aliased. It's cute, but
+    it relies on some pretty dodgy stuff under the hood.
+
+    This idea doesn't work very well with inheritance right now.
+
+BUGS
+    Please report any bugs to
+    <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-RelatedClasses-Aliase
+    d>.
+
+SEE ALSO
+    MooseX::RelatedClasses, aliased.
+
+AUTHOR
+    Toby Inkster <tobyink@cpan.org>.
+
+COPYRIGHT AND LICENCE
+    This software is copyright (c) 2012 by Toby Inkster.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
+DISCLAIMER OF WARRANTIES
+    THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+    MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
